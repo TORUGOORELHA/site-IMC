@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+/* Define keyframes for the background animation */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* Middle position */
+    }
+    100% {
+        background-position: 0% 50%; /* End position (loop back) */
+    }
+}
+
 body{
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -8,10 +21,10 @@ body{
     width: 100vw;
     min-height: 100vh;
     background: linear-gradient(to right, #6a11cb, #2575fc); /* Fundo gradiente */
-    background-image: url(./img/20250522_1638_Calcular\ o\ IMC_remix_01jvwr026ffx9rm8s0tcbcrv57.png);
-    background-size: cover;
     margin: 0;
     color: #333;
+    /* Apply the animation to the body */
+    animation: moveBackground 20s ease infinite; /* Animation name, duration, timing function, and loop */
 }
 
 .container {
