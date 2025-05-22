@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Fundo gradiente */
+    background-image: url(./img/20250522_1638_Calcular\ o\ IMC_remix_01jvwr026ffx9rm8s0tcbcrv57.png);
+    background-size: cover;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    position: relative;
+    left: 450px;
+    background-color: #ffffff; /* Fundo branco limpo */
+    padding: 30px; /* Espaçamento interno generoso */
+    border-radius: 10px; /* Cantos suavemente arredondados */
+    /* Sombra mais refinada e sutil para profundidade */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    /* Borda muito sutil para definição */
+    border: 1px solid #f0f0f0; /* Cor de borda mais clara */
+    width: 90%;
+    max-width: 400px; /* Mantém a largura máxima */
+    text-align: center;
+    min-height: auto; /* Altura mínima automática */
+    /* Adiciona uma transição suave para possíveis interações futuras */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Opcional: Efeito sutil ao passar o mouse */
+.container:hover {
+    transform: translateY(-3px); /* Levanta ligeiramente */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Sombra um pouco maior */
+}
+
+h1 {
+    font-family: "Bebas Neue";
+    margin-top: 0;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input {
+    width: calc(100% - 20px); /* Ajusta a largura considerando o padding */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #2575fc; /* Cor da borda ao focar */
+    outline: none; /* Remove o outline padrão */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2575fc; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1a5bbd; /* Cor do botão ao passar o mouse */
+}
+
+#resultado-container {
+    margin-top: 30px;
+    text-align: left;
+}
+
+#resultado-container h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: center;
+}
+
+#resultado-tabela {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaço entre as bordas das células */
+    margin-top: 10px;
+}
+
+#resultado-tabela th,
+#resultado-tabela td {
+    border: 1px solid #ddd; /* Borda para as células */
+    padding: 10px;
+    text-align: left;
+}
+
+#resultado-tabela th {
+    background-color: #f2f2f2; /* Cor de fundo para o cabeçalho */
+    font-weight: bold;
+}
+
+#resultado-tabela tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+}
+
+/* Cores para as diferentes classificações na célula de classificação */
+#classificacao-imc.abaixo-peso { color: #ff9800; font-weight: bold; } /* Laranja */
+#classificacao-imc.peso-normal { color: #4caf50; font-weight: bold; } /* Verde */
+#classificacao-imc.sobrepeso { color: #ff9800; font-weight: bold; } /* Laranja */
+#classificacao-imc.obesidade-grau-i { color: #f44336; font-weight: bold; } /* Vermelho */
+#classificacao-imc.obesidade-grau-ii { color: #e53935; font-weight: bold; } /* Vermelho mais escuro */
+#classificacao-imc.obesidade-grau-iii { color: #d32f2f; font-weight: bold; } /* Vermelho bem escuro */

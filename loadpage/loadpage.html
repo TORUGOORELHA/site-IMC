@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carregando...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4; /* Cor de fundo suave */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            flex-direction: column; /* Para centralizar verticalmente */
+        }
+
+        .loading-spinner {
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite; /* Animação de rotação */
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Carregando Calculadora de IMC...</div>
+
+    <script>
+        // Tempo em milissegundos antes de redirecionar (ex: 3000ms = 3 segundos)
+        const delay = 3000;
+        // A página para onde redirecionar (sua página da calculadora de IMC)
+        const targetPage = 'index.html'; // Certifique-se de que sua página principal se chama index.html
+
+        setTimeout(() => {
+            window.location.href = targetPage;
+        }, delay);
+    </script>
+</body>
+</html>
